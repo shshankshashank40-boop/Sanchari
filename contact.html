@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sanchari</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./images/WhatsApp Image 2025-10-11 at 8.09.32 PM.jpeg" alt="Logo" />
+        <ul class="navbar-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./destinations.html">Destinations</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We're happy to answer your questions. Send us a message or use the info below to reach out!</p>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="thankYouMessage" style="display:none;">
+            <p>Thank you for contacting us! We'll get back to you soon.</p>
+        </div>
+        <address>
+            Email: info@sanchari.com<br>
+            Phone: 123-456-7890<br>
+            123 Main Street, City, Country
+        </address>
+    </section>
+    <script>
+    document.querySelector('form[name="contact"]').addEventListener('submit', function(e) {
+        e.preventDefault();
+        this.style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+    });
+    </script>
+</body>
+</html>
+    <footer class="footer">
+        <p>&copy; 2025 Sanchari. All rights reserved.</p>
+    </footer>
